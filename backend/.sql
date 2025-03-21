@@ -22,7 +22,8 @@ CREATE TABLE veiculos (
     modelo VARCHAR(255) NOT NULL,
     cor VARCHAR(255) NOT NULL,
     morador_id INT NOT NULL,
-    box VARCHAR(255) NOT NULL
+    box VARCHAR(255) NOT NULL,
+    foreign key (morador_id) references moradores(id) on delete cascade
 );
 
 INSERT INTO veiculos (placa, modelo, cor, morador_id, box)

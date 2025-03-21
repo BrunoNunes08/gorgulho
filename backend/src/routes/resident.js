@@ -1,29 +1,14 @@
 import { Router } from "express";
-import connection from "../lib/db.js";
+import { deleteResidents, getResidents, postResidents, putResidents } from "../services/resident.js";
 
 const residentRoutes = Router();
 
-residentRoutes.get("/", (_, res) => {
-    const query = "SELECT * FROM moradores";
+residentRoutes.get("/", getResidents);
 
-    connection(query, (err, results) => {
-        if (err) {
-            return res.status(500).json({
-                success: false,
-                message: "Erro ao listar moradores",
-                data: err
-            });
-        }
-        return res.status(200).json({
-            success: true,
-            message: "Moradores listados com sucesso",
-            data: results
-        });
-    });
-});
+residentRoutes.post("/", postResidents);
 
-residentRoutes.post("/", (req, res) => {
+residentRoutes.put("/:id", putResidents);
 
-});
+residentRoutes.delete("/:id", deleteResidents);
 
 export default residentRoutes;
