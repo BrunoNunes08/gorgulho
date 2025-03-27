@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Morador</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="assets/logo.png" alt="Gorgulho's Comdominium" class="logo">
+    </header>
+    <main>
+        <form>
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome..." required>
+            </div>
+            <div>
+                <label for="bloco">Bloco:</label>
+                <input type="text" name="bloco" id="bloco" placeholder="Bloco..." required>
+            </div>
+            <div>
+                <label for="apartamento">Apartamento:</label>
+                <input type="text" name="apartamento" id="apartamento" placeholder="Apartamento..." required>
+            </div>
+            <div>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="Telefone..." required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Email..." required>
+            </div>
+            <div>
+                <label for="status">Status:</label>
+                <select name="status" id="status" required>
+                    <option value="">-- Status --</option>
+                    <option value="residente">Residente</option>
+                    <option value="proprietario">Proprietário</option>
+                    <option value="visitante">Visitante</option>
+                </select>
+                status ENUM("residente", "proprietario", "visitante"),
+            </div>
+        </form>
+    </main>
+</body>
+</html>
