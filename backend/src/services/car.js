@@ -1,9 +1,10 @@
 import connection from "../lib/db.js";
 
 export const getCar = (_, res) => {
-    const query = "SELECT * FROM veiculos";
+    const query = `SELECT veiculos.*, moradores.nome as dono FROM veiculos
+    INNER JOIN moradores ON moradores.id = veiculos.morador_id`;
 
-    connection(query, (err, results) => {
+    connection.query(query, (err, results) => {
         if (err) {
             return res.status(500).json({
                 success: false,
