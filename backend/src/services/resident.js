@@ -77,7 +77,7 @@ export const deleteResidents = (req, res) => {
         return res.status(200).json({
             success: true,
             message: "Morador deletado com sucesso",
-            data: res
+            data: results
         });
     });
 }

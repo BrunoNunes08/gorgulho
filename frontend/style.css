@@ -130,6 +130,7 @@ tr:nth-child(2n) {
 }
 
 .main-listagem {
+    padding-bottom: 25px;
     & h1 {
         font-weight: normal;
         text-align: center;
