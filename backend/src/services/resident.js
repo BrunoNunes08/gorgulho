@@ -41,9 +41,9 @@ export const postResidents = (req, res) => {
 };
 
 export const putResidents = (req, res) => {
-    const params = [req.body.nome, req.body.bloco, req.body.apartamento, req.body.telefone, req.body.email, req.body.status, req.params.id];
+    const params = [req.body.nome, req.body.bloco, req.body.apartamento, req.body.telefone, req.body.email, req.params.id];
 
-    const query = "UPDATE moradores SET nome = ?, bloco = ?, apartamento = ?, telefone = ?, email = ?, status = ? WHERE id = ?";
+    const query = "UPDATE moradores SET nome = ?, bloco = ?, apartamento = ?, telefone = ?, email = ? WHERE id = ?";
 
     connection.query(query, params, (err, results) => {
         if (err) {

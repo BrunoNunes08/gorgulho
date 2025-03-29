@@ -9,39 +9,61 @@
 </head>
 <body>
     <header class="header">
-        <img src="../assets/logo.png" alt="Gorgulho's Comdominium" class="logo">
+        <a href="../index.html">
+            <img src="../assets/logo.png" alt="Gorgulho's Comdominium" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="form-morador.html">Cadastrar Morador</a>
+                </li>
+                <li>
+                    <a href="form-veiculo.html">Cadastrar Veículo</a>
+                </li>
+                <li>
+                    <a href="#">Listagem</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main class="main-listagem">
         <h1>Listagem de Moradores</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Bloco</th>
-                    <th>Apartamento</th>
-                    <th>Telefone</th>
-                    <th>Email</th>
-                    <th>Status</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody class="moradores-tbody">
-            </tbody>
-        </table>
+        <div class="div-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Bloco</th>
+                        <th>Apartamento</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody class="moradores-tbody">
+                </tbody>
+            </table>
+        </div>
         
         <h1>Listagem de Veículos</h1>
-        <table>
-            <thead>
-                <th>Placa</th>
-                <th>Modelo</th>
-                <th>Cor</th>
-                <th>Dono</th>
-                <th>Vaga</th>
-                <th>Ações</th>
-            </thead>
-            <tbody class="veiculos-tbody">
-            </tbody>
-        </table>
+        <div class="div-table">
+            <table>
+                <thead>
+                    <th>Placa</th>
+                    <th>Modelo</th>
+                    <th>Cor</th>
+                    <th>Dono</th>
+                    <th>Vaga</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody class="veiculos-tbody">
+                </tbody>
+            </table>
+        </div>
     </main>
 </body>
 </html>

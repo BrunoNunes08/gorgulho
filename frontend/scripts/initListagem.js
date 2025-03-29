@@ -16,14 +16,14 @@ export const getMoradores = async () => {
             <td>${morador.email}</td>
             <td>${morador.status}</td>
             <td>
-                <button class="edit-button" data-id="${morador.id}">Editar</button>
-                <button class="delete-button" data-id="${morador.id}">Excluir</button>
+                <button class="edit-button-morador" data-id="${morador.id}">Editar</button>
+                <button class="delete-button-morador" data-id="${morador.id}">Excluir</button>
             </td>
         </tr>
         `
     }
-    const editButtons = document.querySelectorAll(".edit-button");
-    const deleteButtons = document.querySelectorAll(".delete-button");
+    const editButtons = document.querySelectorAll(".edit-button-morador");
+    const deleteButtons = document.querySelectorAll(".delete-button-morador");
     editButtons.forEach(button => button.addEventListener("click", () => editMorador(button.dataset.id)))
     deleteButtons.forEach(button => button.addEventListener("click", () => deleteMorador(button.dataset.id)))
 };

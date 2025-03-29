@@ -19,6 +19,27 @@ body {
     }
 }
 
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    font-size: 1.3em;
+
+    & a {
+        color: #1D3A60;
+        padding: 8px 10px;
+        transition: .4s;
+        border-radius: 15px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #1D3A60;
+            color: white;
+        }
+    }
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -105,6 +126,10 @@ body {
     }
 }
 
+.div-table {
+    width: 100%;
+}
+
 table {
     border-collapse: collapse;
     margin: auto;
@@ -130,10 +155,33 @@ tr:nth-child(2n) {
 }
 
 .main-listagem {
+    padding: 15px;
     padding-bottom: 25px;
     & h1 {
         font-weight: normal;
         text-align: center;
         margin: 20px 0;
+    }
+}
+
+@media (max-width: 650px) {
+    nav ul {
+        font-size: 1em;
+        gap: 5px;
+        text-align: center;
+
+        & a {
+            padding: 5px;
+            text-decoration: underline;
+        }
+    }
+    .main-form {
+        padding: 0;
+    }
+    .form {
+        border-radius: 0;
+    }
+    .section-main {
+        flex-direction: column;
     }
 }
