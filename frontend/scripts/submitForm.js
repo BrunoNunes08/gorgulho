@@ -26,7 +26,7 @@ export const submitFormMorador = async () => {
         return;
     }
 
-    location.href = "href/pages/listagem.html";
+    location.pathname = "frontend/pages/listagem.html";
 };
 
 export const submitFormVeiculo = async () => {
